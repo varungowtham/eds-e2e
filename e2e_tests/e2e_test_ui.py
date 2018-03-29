@@ -19,7 +19,7 @@ cp /tmp/eds/demo/eds_sut/TestApplication/test_application.py apps/TestApplicatio
 """
 
 options = webdriver.ChromeOptions()
-#options.add_argument('headless')
+options.add_argument('headless')
 driver = webdriver.Chrome(chrome_options=options)
 driver.get(url)
 
