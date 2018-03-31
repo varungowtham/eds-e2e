@@ -40,8 +40,8 @@ time.sleep(2)
 # Create a new TJob
 driver.find_element_by_xpath("//button[contains(string(), 'New TJob')]").click()
 driver.find_element_by_class_name("tJobName").send_keys(tjobname)
-driver.find_element_by_xpath("//md-select[contains(string(), 'tJobSut')]")_
-#driver.find_element_by_class_name("mat-select-trigger").click()
+driver.find_element_by_xpath("//md-select[contains(string(), 'tJobSut')]").click()
+# driver.find_element_by_class_name("mat-select-trigger").click()
 driver.find_element_by_xpath("//md-option[contains(string(), 'None')]").click()
 driver.find_element_by_name("tJobImageName").send_keys(tjobimage)
 driver.find_element_by_name("commands").send_keys(COMMANDS)
