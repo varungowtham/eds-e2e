@@ -2,7 +2,7 @@
 
 max=10
 
-for number in `seq 1 $max10`
+for number in `seq 1 $max`
 do
   ./create-app-structure -d TestApplication$number
   cp /tmp/eds-e2e/qe_1/TestApplication$number/test_application$number.py \
@@ -11,7 +11,7 @@ do
     apps/TestApplication$number/src/testapplication$number/
   
   echo "before launch"
-  echo | nohup ./apps/test-application$number > /dev/null 2>&1 &
+  nohup ./apps/test-application$number > /dev/null 2>&1 &
   echo "after launch"
   sleep 10
 done
