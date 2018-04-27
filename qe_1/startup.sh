@@ -10,7 +10,7 @@ do
   cp /tmp/eds-e2e/qe_1/TestApplication$number/__main__.py \
     apps/TestApplication$number/src/testapplication$number/
 
-  sh -c ./apps/test-application$number
+  nohup ./apps/test-application$number > /dev/null 2>&1 &
   sleep 10
 done
 
