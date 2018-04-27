@@ -8,7 +8,7 @@ import signal
 class TestApplication5(XAE):
 
     def __init__(self, *args, **kw):
-        super(TestApplication, self).__init__(*args, **kw)
+        super(TestApplication5, self).__init__(*args, **kw)
 
         self.orch_path = 'onem2m/EDSOrch/edsorch/'
         self.sensor_temp_path = 'onem2m/TemperatureSensor/'
