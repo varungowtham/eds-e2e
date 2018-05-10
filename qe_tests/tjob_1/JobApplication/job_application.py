@@ -2,6 +2,7 @@ from openmtc_app.onem2m import XAE
 from openmtc_onem2m.model import Container
 from openmtc_onem2m.client.http import OneM2MHTTPClient
 from openmtc_onem2m.transport import OneM2MRequest
+import gevent
 
 class JobApplication(XAE):
 
@@ -68,6 +69,12 @@ class JobApplication(XAE):
         else:
             print "SuT actuators not found"
             exit -1
+
+        gevent.sleep(0)
+        gevent.spawn_later(10, self.app_shutdown)
+
+    def app_shutdown(self):
+        os.kill(os.getpid(), signal.SIGTERM)
 
     def _on_shutdown(self):
         pass
