@@ -11,6 +11,7 @@ do
     apps/TestApplication$number/src/testapplication$number/
   
   echo "before launch"
+  echo initiating testapplication$number
   nohup ./apps/test-application$number > /dev/null 2>&1 &
   echo "after launch"
   sleep 10
