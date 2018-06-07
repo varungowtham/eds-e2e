@@ -19,7 +19,6 @@ if onem2m_response.response_status_code.http_status_code  == 200:
 else:
   print "EDSOrch path not found"
   verdict = False
-  return
 
 print "scanning AEs"
 
