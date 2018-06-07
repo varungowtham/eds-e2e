@@ -33,14 +33,14 @@ for child in children:
     onem2m_request = OneM2MRequest("retrieve", to=sensor_path)
     promise = client.send_onem2m_request(onem2m_request)
     onem2m_response = promise.get()
-    sensor = onem2m_response.content.childResource.path
+    sensor = onem2m_response.content.childResource
     print "    found sensor: " + sensor[0].path
 
     actuator_path = base_path + "/" + child.path + "/" + "actuators"
     onem2m_request = OneM2MRequest("retrieve", to=actuator_path)
     promise = client.send_onem2m_request(onem2m_request)
     onem2m_response = promise.get()
-    actuator = onem2m_response.content.childResource.path
+    actuator = onem2m_response.content.childResource
     print "    found actuator: " + actuator[0].path
 
 
